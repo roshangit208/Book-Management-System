@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8085/api"
+  "proxy": "https://book-management-system-vcsi.onrender.com/api"
 }
