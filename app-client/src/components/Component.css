@@ -1,0 +1,13 @@
+.wrapper-form
+{
+    position: absolute;
+    top: 0;
+    left : 0;
+    transition: all 0.5s ease;
+    transform: translateX(-100%);
+}
+
+.wrapper-form.active 
+{
+      transform: translateX(0%) ;
+}
