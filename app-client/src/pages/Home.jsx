@@ -19,15 +19,10 @@ const Home = () => {
         const fetchBooks = async () => {
             const result = await axios.get("/book");
             console.log(result.data);
-            setBooks(prevBooks => {
-                if (JSON.stringify(prevBooks) !== JSON.stringify(result.data)) {
-                    return result.data;
-                }
-                return prevBooks;
-            });
+            setBooks(result.data);
         };
         fetchBooks();
-    }, [books]);
+    }, []);
 
     return (
         <>
