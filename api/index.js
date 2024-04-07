@@ -5,15 +5,17 @@ const morgan = require("morgan"); // http request logger
 const bookRoute = require("./routes/book");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const cors = require("cors");
 require("dotenv").config();
 const app = express();
 mongoose.connect(process.env.DATABASE_CLUSTER_URL , {useNewUrlParser : true , useUnifiedTopology : true});
 
 // middlewares
+
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
-
+app.use(cors());
 
 
 
